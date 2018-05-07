@@ -22,7 +22,7 @@ public:
     static string playlistName(string nameofPlaylist);
     static void loadPlaylist();
     static void playPlaylist();
-    
+    static void AddNewSong(string max_likes);
 };
 
 #endif /* playlist_h */

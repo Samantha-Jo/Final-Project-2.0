@@ -36,7 +36,6 @@ private:
     string duration;
     string genre;
     string likes;
-    
 };
 
 #endif /* song_h */

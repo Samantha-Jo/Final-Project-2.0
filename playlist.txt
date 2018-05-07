@@ -1,0 +1,35 @@
+12	Bruno Mars	24K Magic	3.5	Pop
+8	Eminem	Walk on Water	4.5	Pop
+10	Dyleet	Ding Dong Ravers	4.1	Dancehall
+5	Radiohead	Paranoid Android	4	Rock
+27	Chief Keef	Glory Bridge	4.3	Rap
+23	Ding Dong	Gas	4.6	Dancehall
+15	Vybz Kartel	Fever	4.9	Dancehall
+11	Quality Control	Ice Tray	3.2	Rap
+21	G Herbo	This N That	3.5	RnB
+19	Maleek Berry	Let Me Know	3.8	RnB
+13	Migos	Stir Fry	4	Rap
+34	Quality Control	Ice Tray	4.3	Rap
+14	William Onyeabor	Fantastic Man	3.1	Unknown
+31	Trulla Eddie	No Worries	3.4	Unknown
+1	Key Glock	Racks Today	3.7	Rap
+29	Str8 On Ha	Dee Mula	4	Rap
+17	Alkaline	Suave	4.3	Dancehall
+28	Drake	God's Plan	4.6	Rap
+9	Ed Sheeran	Perfect	4.9	Pop
+20	Ding Dong	Shampoo	5.1	Dancehall
+35	Brockhampton	Sweet	4.1	Unknown
+2	N3RD	Lemon	3.1	Pop
+16	A$AP Mob	Frat Rules	4.1	Rap
+22	Cal Scruby	Rain	3.1	Rap
+26	Alkaline	Wait Yuh Turn	3.1	Dancehall
+6	Kendrick Lamar	DNA	2.1	Rap
+4	Ski Mask	Catch Me Outside	2.1	Rap
+30	Eminem	Offended	4.1	Rap
+7	Ding Dong	Flairy	8.1	Dancehall
+3	Aidonia	Banga	7.1	Dancehall
+18	Quality Control	Ice Tray	6.1	Rap
+24	Aidonia	Breeze	5.1	Dancehall
+25	Migos	Notice Me	4.1	Rap
+33	Drake	God's Plan	8.1	Rap
+32	Lil Baby	Freestyle	9.1	Rap

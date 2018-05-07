@@ -19,8 +19,8 @@ using namespace std;
 
 class Sort { //sort class
 public:
-    template<typename TheType>
-    static void SelectionSort(TheType arrList[], int arr_Length);
+    template<typename T,typename A>
+    static void SelectionSort(vector<T, A> const& obj);
 };
 
 #endif /* sort_h */

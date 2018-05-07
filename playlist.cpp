@@ -10,6 +10,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
+#include <algorithm>
 #include <fstream>
 #include <string>
 #include <cstdlib>
@@ -45,6 +46,7 @@ void Playlist::loadPlaylist(){
     string duration;
     string genre;
     string likes;
+    //About to load the entire playlist in whatever order is in the file
     while (!inFS.eof()){ //loops through the file until it gets to the end of the file
         
         getline (inFS, likes, '\t');//gets the complete string that is followed by a tab
@@ -56,9 +58,7 @@ void Playlist::loadPlaylist(){
         getline (inFS, duration, '\t');
         playlist.push_back(duration);
         getline (inFS, genre, '\n'); //gets the complete string that is followed by the end of the line
-        playlist.push_back(genre);
-        
-        
+        playlist.push_back(genre);       
     }
     cout << endl;
     cout << "Playlist loaded" << endl;
@@ -84,6 +84,10 @@ void Playlist::playPlaylist(){
     string duration;
     string genre;
     string likes;
+    /*
+    Errors:
+        Needs to play them in order of the likes (descending order)
+    */
     while (!inFS.eof()){ //loops through the file until it gets to the end of the file
         
         getline (inFS, likes, '\t');//gets the complete string that is followed by the end of the line
@@ -100,15 +104,25 @@ void Playlist::playPlaylist(){
         
         getline (inFS, genre, '\n'); //gets the complete string that is followed by the end of the line
         playlistSongs.SetGenre(genre);
-        
-       int playlistSize = 50;
-        Sort::MergeSort(likes, 0, playlistSize - 1);
-        for (int i = 0; i < 200; i++){
-        cout << playlist[i];
-        }
-
 
         //outputs to file file class_songs.txt
         cout << playlistSongs.GetLikes() << ". " << playlistSongs.GetTitle() << " by " << playlistSongs.GetArtist() << " with a duration of " <<  playlistSongs.GetDuration() << " and genre of " << playlistSongs.GetGenre() << endl;
     }
+}
+
+void Playlist::AddNewSong(string max_likes){
+    string artist;
+    string title;
+    string duration;
+    string genre;
+    string likes;
+    cout << "Song Name: "; cin >> title;
+    cout << "Song Artist: "; cin >> artist;
+    cout << "Song Duration: "; cin >> duration;
+    cout << "Song Genre: "; cin >> genre;
+    likes = max_likes;
+    ofstream file;
+    
+    //Now to write the new song data to the playlist file
+    //suggest to user to reload playlist
 }
