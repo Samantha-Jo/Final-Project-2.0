@@ -7,9 +7,12 @@
 //
 
 #include <iostream>
+#include <string>
+#include <fstream>
 #include "song.h"
 #include "playlist.h"
 #include "user.h"
+#include "sort.h"
 #include <vector>
 using namespace std;
 
@@ -45,13 +48,14 @@ int main() {
                 
             case 3:
                 User::userName(nameofUser);
+                break;
             
             case 4:
                 cout << "I just want to talk to my friends.";
                 break;
 
             case 5:
-                cout << "I just want to talk to my friends.";
+                cout << "Have a Good Day!";
                 break;
                 
             default:
@@ -61,5 +65,5 @@ int main() {
     }
     while (selection != 5);
     
-        
+    return 0;    
 }
