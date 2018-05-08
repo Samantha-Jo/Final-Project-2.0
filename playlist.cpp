@@ -15,6 +15,7 @@
 #include <string>
 #include <cstdlib>
 #include <vector>
+#include <ios>
 #include <ctime>
 #include "playlist.h"
 #include "song.h"
@@ -83,13 +84,31 @@ void Playlist::playPlaylist(){
     string title;
     string duration;
     string genre;
-    string likes;
+    string likes="";
     /*
     Errors:
         Needs to play them in order of the likes (descending order)
     */
-    while (!inFS.eof()){ //loops through the file until it gets to the end of the file
+   
+    getline (inFS, likes, '\t');//gets the complete string that is followed by the end of the line
+    playlistSongs.SetLikes(likes);
+
+    getline (inFS, artist, '\t');
+    playlistSongs.SetArtist(artist);
         
+    getline (inFS, title, '\t');
+    playlistSongs.SetTitle(title);
+        
+    getline (inFS, duration, '\t');
+    playlistSongs.SetDuration(duration);
+        
+    getline (inFS, genre, '\n'); //gets the complete string that is followed by the end of the line
+    playlistSongs.SetGenre(genre);  
+    
+    while (!inFS.eof()){ //loops through the file until it gets to the end of the file
+        //outputs to file file class_songs.txt
+        cout << playlistSongs.GetLikes() << ". " << playlistSongs.GetTitle() << " by " << playlistSongs.GetArtist() << " with a duration of " <<  playlistSongs.GetDuration() << " and genre of " << playlistSongs.GetGenre() << endl;
+
         getline (inFS, likes, '\t');//gets the complete string that is followed by the end of the line
         playlistSongs.SetLikes(likes);
 
@@ -103,26 +122,29 @@ void Playlist::playPlaylist(){
         playlistSongs.SetDuration(duration);
         
         getline (inFS, genre, '\n'); //gets the complete string that is followed by the end of the line
-        playlistSongs.SetGenre(genre);
-
-        //outputs to file file class_songs.txt
-        cout << playlistSongs.GetLikes() << ". " << playlistSongs.GetTitle() << " by " << playlistSongs.GetArtist() << " with a duration of " <<  playlistSongs.GetDuration() << " and genre of " << playlistSongs.GetGenre() << endl;
+        playlistSongs.SetGenre(genre);   
     }
 }
 
-void Playlist::AddNewSong(string max_likes){
-    string artist;
+void Playlist::AddNewSong(int max_likes){
+    string artist, dummy;
     string title;
     string duration;
     string genre;
-    string likes;
-    cout << "Song Name: "; cin >> title;
-    cout << "Song Artist: "; cin >> artist;
-    cout << "Song Duration: "; cin >> duration;
-    cout << "Song Genre: "; cin >> genre;
-    likes = max_likes;
-    ofstream file;
+    int likes;
+    cout << "\tSong Addition\n\n";
+    getline(cin, dummy);
+    cout << "Song Name: "; getline(cin,title); cout << endl;
+    cout << "Song Artist: "; getline(cin,artist); cout << endl;
+    cout << "Song Duration: "; getline(cin,duration); cout << endl;
+    cout << "Song Genre: "; getline(cin, genre); cout << endl;
+    likes = max_likes + 1;
     
+    //Printing new song to the file
+    ofstream file;
+    file.open("playlist.txt",ios_base::app);
+    file << "\n" << likes << "\t" << artist << "\t" << title << "\t" << duration << "\t" << genre << "\n";
+    file.close();
     //Now to write the new song data to the playlist file
     //suggest to user to reload playlist
 }

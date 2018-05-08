@@ -1,4 +1,4 @@
-12	Bruno Mars	24K Magic	3.5	Pop
+12	Bruno Mars 	24K Magic	3.5	Pop
 8	Eminem	Walk on Water	4.5	Pop
 10	Dyleet	Ding Dong Ravers	4.1	Dancehall
 5	Radiohead	Paranoid Android	4	Rock
@@ -32,4 +32,4 @@
 24	Aidonia	Breeze	5.1	Dancehall
 25	Migos	Notice Me	4.1	Rap
 33	Drake	God's Plan	8.1	Rap
-32	Lil Baby	Freestyle	9.1	Rap
+32 	Lil Baby	Freestyle	9.1	Rap
