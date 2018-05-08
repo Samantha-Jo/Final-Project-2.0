@@ -21,7 +21,7 @@ class User{ //create the song class
 public:
     User(); //Constructors
     //mutators
-    static string userName();
+    static string userName(string nameofUser);
     ~User(); //Destructors
 };
 

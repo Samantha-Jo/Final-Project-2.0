@@ -19,8 +19,8 @@ using namespace std;
 
 int main() {
     cout << "WELCOME TO YOUR MUSIC PLAYER\n" << endl;
-    string nameofUser, nameofPlaylist;
-    User::userName(nameofUser);
+    string nameofUser="", nameofPlaylist="";
+    nameofUser = User::userName(nameofUser);
     int max;
     int selection;
     do {
@@ -63,17 +63,18 @@ int main() {
                 break;
                 
             case 3:
-                try {
+               try {
                     cout << "Update User Information" << endl;
-                    User::userName(nameofUser);
+                    nameofUser = User::userName(nameofUser);
                 }
                 catch (runtime_error& excpt){
                     cout << excpt.what() << endl;
                     cout << "Cannot update user information" << endl;
                 }
                 break;
+            
             case 4:
-                try {
+                try{
                     max = Find_Max_Likes();
                     Playlist::AddNewSong(max);
                     cout << "We suggest you reload the playlist\n";
@@ -112,9 +113,9 @@ int Find_Max_Likes(){
         cout << "Couldn't open playlist.txt" <<endl;
     }
     /*Looping until end of file:
-     uses getline to move line by line
-     meanwhile we are counting each line to get max likes
-     Assumtption: max likes == total # of songs in playlist
+        uses getline to move line by line
+        meanwhile we are counting each line to get max likes
+        Assumtption: max likes == total # of songs in playlist
      */
     while(!myfile.eof()){
         getline(myfile,line);

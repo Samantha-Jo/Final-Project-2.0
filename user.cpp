@@ -14,10 +14,12 @@ using namespace std;
 
 #include "user.h"
 
+User::User(){}
+
 string User::userName(string nameofUser) {
-    try {
+     try {
     cout << "Username: ";
-    cin.get();
+    //cin.get();
     getline(cin, nameofUser);
     cout << endl;
         if (nameofUser == "") {
@@ -32,3 +34,4 @@ string User::userName(string nameofUser) {
     return nameofUser;
 }
 
+User::~User(){}
