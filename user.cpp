@@ -16,13 +16,14 @@ using namespace std;
 
 User::User(){}
 
-string User::userName(string nameofUser) {
+string User::userName() {
+    string name_User;
     cout << "Username: ";
     cin.get();
-    getline(cin, nameofUser);
+    getline(cin, name_User);
     cout << endl;
     
-    return nameofUser;
+    return name_User;
 }
 
 User::~User(){}

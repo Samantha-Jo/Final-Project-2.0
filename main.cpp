@@ -20,7 +20,7 @@ using namespace std;
 int main() {
     cout << "WELCOME TO YOUR MUSIC PLAYER\n" << endl;
     string nameofUser="", nameofPlaylist="";
-    User::userName(nameofUser);
+    nameofUser = User::userName();
     int max;
     int selection;
     do {
@@ -49,7 +49,7 @@ int main() {
                 
             case 3:
                 cout << "Update User Information" << endl;
-                User::userName(nameofUser);
+                nameofUser = User::userName();
             
             case 4:
                 max = Find_Max_Likes();
