@@ -7,25 +7,27 @@ Presenting Sounds: A new way to enjoy the music you love.
 
 -->Contributions:
 
-1. Travis Brown:
-    -Improved main.cpp UX
-    -made vectors template parameters
-    -basis for Sort template functions
+1. Samantha-Jo Cunningham:
+    -Created the basis for the menu in main.cpp
+    -Co-Created the playlist.cpp (load Playlist, playlist Name, play playlist)
+    -Implement try, throw, catch statement for error handling
 
-2. Azeezah Muhammad:
-    -Foundation of main.cpp, user.cpp & playlist.cpp
-    -Integration
+2. Travis Brown:
+    -Co-Created the playlist.cpp (Add new song to play list, play playlist)
+    -Created the getlikes function in the main.cpp
 
 3. Peace Aku:
     -Song.cpp
+    -Figured out the time complexity for the entire program.
 
-4. Samantha-Jo Cunningham:
-    -Alterations to Sort.cpp
+4. Azeezah Muhammad:
+    -Created the user.cpp
+    -Ensures all classes work together with the main.cpp so that program requirements are achieved.
+SIDENOTE: 
 Files:
-
 main.cpp
-users.h
-users.cpp
+user.h
+user.cpp
 playlist.h
 playlist.cpp
 song.h
