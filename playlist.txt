@@ -40,3 +40,5 @@
 40	Alkaline	Farewell	4	Dancehall
 41	Jaden Smith	Cries	5	Pop
 42	Alkaline	Suave	4	Dancehall
+43	Chronixx	I Can	4	Reggae
+44	Alkaline	Mirage	5	Dancehall

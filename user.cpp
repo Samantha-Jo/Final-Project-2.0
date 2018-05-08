@@ -17,12 +17,12 @@ using namespace std;
 User::User(){}
 
 string User::userName(string nameofUser) {
-     try {
+    try {
     cout << "Username: ";
-    //cin.get();
+    cin.get();
     getline(cin, nameofUser);
     cout << endl;
-        if (nameofUser == "") {
+        if(nameofUser == "") {
             throw runtime_error("Invalid Username");
         }
     }
