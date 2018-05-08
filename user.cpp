@@ -14,16 +14,21 @@ using namespace std;
 
 #include "user.h"
 
-User::User(){}
-
-string User::userName() {
-    string name_User;
+string User::userName(string nameofUser) {
+    try {
     cout << "Username: ";
     cin.get();
-    getline(cin, name_User);
+    getline(cin, nameofUser);
     cout << endl;
+        if (nameofUser == "") {
+            throw runtime_error("Invalid Username");
+        }
+    }
+    catch (runtime_error& excpt){
+        cout << excpt.what() << endl;
+        cout << "Please enter a valid username" << endl;
+    }
     
-    return name_User;
+    return nameofUser;
 }
 
-User::~User(){}

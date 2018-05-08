@@ -19,8 +19,8 @@ using namespace std;
 
 int main() {
     cout << "WELCOME TO YOUR MUSIC PLAYER\n" << endl;
-    string nameofUser="", nameofPlaylist="";
-    nameofUser = User::userName();
+    string nameofUser, nameofPlaylist;
+    User::userName(nameofUser);
     int max;
     int selection;
     do {
@@ -37,24 +37,51 @@ int main() {
         switch (selection)
         {
             case 1:
-                Playlist::loadPlaylist();
-                nameofPlaylist = Playlist::playlistName(nameofPlaylist);
+                try {
+                    Playlist::loadPlaylist();
+                    nameofPlaylist = Playlist::playlistName(nameofPlaylist);
+                    if (nameofPlaylist == "") {
+                        throw runtime_error("Invalid PlaylistName");
+                    }
+                }
+                catch (runtime_error& excpt){
+                    cout << excpt.what() << endl;
+                    cout << "Cannot load playlist." << endl;
+                }
                 break;
                 
             case 2:
-                cout << "Now playing your playlist: " << nameofPlaylist << endl;
-                Playlist::playPlaylist();
-                cout << endl;
+                try {
+                    cout << "Now playing your playlist: " << nameofPlaylist << endl;
+                    Playlist::playPlaylist();
+                    cout << endl;
+                }
+                catch (runtime_error& excpt){
+                    cout << excpt.what() << endl;
+                    cout << "Playlist cannot be played" << endl;
+                }
                 break;
                 
             case 3:
-                cout << "Update User Information" << endl;
-                nameofUser = User::userName();
-            
+                try {
+                    cout << "Update User Information" << endl;
+                    User::userName(nameofUser);
+                }
+                catch (runtime_error& excpt){
+                    cout << excpt.what() << endl;
+                    cout << "Cannot update user information" << endl;
+                }
+                break;
             case 4:
-                max = Find_Max_Likes();
-                Playlist::AddNewSong(max);
-                cout << "We suggest you reload the playlist\n";
+                try {
+                    max = Find_Max_Likes();
+                    Playlist::AddNewSong(max);
+                    cout << "We suggest you reload the playlist\n";
+                }
+                catch (runtime_error& excpt){
+                    cout << excpt.what() << endl;
+                    cout << "Cannot Add song to Playlist" << endl;
+                }
                 break;
 
             case 5:
@@ -85,9 +112,9 @@ int Find_Max_Likes(){
         cout << "Couldn't open playlist.txt" <<endl;
     }
     /*Looping until end of file:
-        uses getline to move line by line
-        meanwhile we are counting each line to get max likes
-        Assumtption: max likes == total # of songs in playlist
+     uses getline to move line by line
+     meanwhile we are counting each line to get max likes
+     Assumtption: max likes == total # of songs in playlist
      */
     while(!myfile.eof()){
         getline(myfile,line);
