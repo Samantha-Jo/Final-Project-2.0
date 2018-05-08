@@ -22,6 +22,8 @@
 
 using namespace std;
 
+Playlist::Playlist(){}
+
 string Playlist::playlistName(string nameofPlaylist) {
     cout << "Name your playlist: ";
     cin.get();
@@ -122,7 +124,7 @@ void Playlist::playPlaylist(){
     //for (unsigned long int j = Playlistsize; j > 0; j--){
     while (!inFS2.eof()){ //loops through the file until it gets to the end of the file
         
-        getline(inFS2, likes, '\t');//HERE IS THE ISSUE
+        getline(inFS2, likes, '\t');
         playlistSongs.SetLikes(likes); //gets the complete string that is followed by a tab
         
         getline(inFS2, artist, '\t');
@@ -156,17 +158,17 @@ void Playlist::AddNewSong(int max_likes){
     cin.get();
     
     cout << "Song Name: ";
-    
     getline(cin,title); cout << endl;
+
     cout << "Song Artist: ";
-    
     getline(cin,artist); cout << endl;
-    cout << "Song Duration: ";
-    
+
+    cout << "Song Duration: ";  
     getline(cin,duration); cout << endl;
-    cout << "Song Genre: ";
-    
+
+    cout << "Song Genre: ";    
     getline(cin, genre); cout << endl;
+    
     likes = max_likes + 1;
     
     //Printing new song to the file
@@ -177,3 +179,5 @@ void Playlist::AddNewSong(int max_likes){
     //Now to write the new song data to the playlist file
     //suggest to user to reload playlist
 }
+
+Playlist::~Playlist(){}

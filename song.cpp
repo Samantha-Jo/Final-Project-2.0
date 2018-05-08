@@ -14,6 +14,18 @@ using namespace std;
 
 #include "song.h"
 
+song::song(){
+
+}
+
+song::song(string artist, string title, string duration, string genre, string likes){
+    this->artist = artist;
+    this->title = title;
+    this->duration = duration;
+    this->genre = genre;
+    this->likes = likes;
+}
+
 void song::SetArtist(string songArtist) {
     artist = songArtist;
     return;
@@ -59,4 +71,4 @@ string song::GetGenre() const {
 string song::GetLikes() const {
     return likes;
 }
-
+song::~song(){}

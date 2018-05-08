@@ -15,6 +15,8 @@ using namespace std;
 class song { //create the song class
     //create public variables
 public:
+    song();//Constructors
+    song(string artist, string title, string duration, string genre, string likes); //Constructors
     //mutators
     void SetArtist(string songArtist);
     void SetTitle(string songTitle);
@@ -28,8 +30,9 @@ public:
     string GetDuration() const;
     string GetGenre() const;
     string GetLikes() const;
+    ~song(); // Destructors
     
-    //creats private variables
+    //creates private variables
 private:
     string artist;
     string title;

@@ -19,8 +19,10 @@ using namespace std;
 class User{ //create the song class
     //create public variables
 public:
+    User(); //Constructors
     //mutators
     static string userName(string nameofUser);
+    ~User(); //Destructors
 };
 
 #endif /* user_h */

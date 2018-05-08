@@ -14,6 +14,8 @@ using namespace std;
 
 #include "user.h"
 
+User::User(){}
+
 string User::userName(string nameofUser) {
     cout << "Username: ";
     cin.get();
@@ -23,3 +25,4 @@ string User::userName(string nameofUser) {
     return nameofUser;
 }
 
+User::~User(){}

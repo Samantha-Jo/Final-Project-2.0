@@ -18,11 +18,13 @@ using namespace std;
 class Playlist { //create the song class
     //create public variables
 public:
+    Playlist();//Constructors
     //mutators
     static string playlistName(string nameofPlaylist);
     static void loadPlaylist();
     static void playPlaylist();
     static void AddNewSong(int max_likes);
+    ~Playlist(); // Destructors
 };
 
 #endif /* playlist_h */

@@ -19,8 +19,9 @@ using namespace std;
 
 class Sort { //sort class
 public:
-    static void SelectionSort(vector <int> PlaylistVect, int VectSize);
-
+    Sort();//Constructors
+    static void SelectionSort(vector <int> PlaylistVect);
+    ~Sort(); // Destructors
 };
 
 #endif /* sort_h */

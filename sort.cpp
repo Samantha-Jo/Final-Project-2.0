@@ -15,36 +15,30 @@
 #include "sort.h"
 using namespace std;
 
-
-void Sort::SelectionSort(vector <int> PlaylistVect, int VectSize) {
+Sort::Sort(){}
+void Sort::SelectionSort(vector <int> PlaylistVect) {
     int i;
     int j;
     int temp;
     int indexSmallest;
+    int VectSize = PlaylistVect.size();
+    
     cout << "*** SELECTION SORT ***" << endl << endl;
     for (i = 0; i < VectSize; ++i) {
-        
-        // Find index of smallest remaining element
-        indexSmallest = i;
-        for (j = i + 1; j < VectSize; ++j) {
-            
-            if (PlaylistVect[j] < PlaylistVect[indexSmallest]) {
-                indexSmallest = j;
-            }
-        }
-        // Swap numbers[i] and numbers[indexSmallest]
-        temp = PlaylistVect[i];
-        PlaylistVect[i] = PlaylistVect[indexSmallest];
-        PlaylistVect[indexSmallest] = temp;
-        cout <<  "After iteration " << i + 1 << ":" << '\t';
-        cout << "i = " << PlaylistVect[i] << '\t';
-        //cout << "j = " << arrList[j] << '\t';
-        cout << "indexSmallest = " << indexSmallest << '\t';
-        cout << "temp = " << temp << endl << "New List: ";
-        for (int t = 0; t < VectSize; ++t) {
-            cout << PlaylistVect[t] << " ";
-        }
-        cout << endl << endl;
-        
-    }
-};
+      
+      // Find index of smallest remaining element
+      indexSmallest = i;
+      for (j = i + 1; j < VectSize; ++j) {
+         
+         if ( PlaylistVect.at(j) < PlaylistVect.at(indexSmallest) ) {
+            indexSmallest = j;
+         }
+      }
+      
+      //Swap PlaylistVect.at(i) and PlaylistVect.at(indexSmallest)
+      temp = PlaylistVect.at(i);
+      PlaylistVect.at(i) = PlaylistVect.at(indexSmallest);
+      PlaylistVect.at(indexSmallest) = temp;
+   }
+}
+Sort::~Sort(){}
