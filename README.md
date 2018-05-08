@@ -23,7 +23,9 @@ Presenting Sounds: A new way to enjoy the music you love.
 4. Azeezah Muhammad:
     -Created the user.cpp
     -Ensures all classes work together with the main.cpp so that program requirements are achieved.
+    
 SIDENOTE: 
+
 Files:
 main.cpp
 user.h
