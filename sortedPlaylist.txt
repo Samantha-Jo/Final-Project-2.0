@@ -1,0 +1,41 @@
+41	Jaden Smith	Cries	5	Pop
+40	Alkaline	Farewell	4	Dancehall
+39	Rihanna	Needed Me	5	Pop
+38	XX	Intro	8	Unknown
+37	Masicka	Victory	5	Dancehall
+36	kartell	X	5	dancehall
+35	Brockhampton	Sweet	4.1	Unknown
+34	Quality Control	Ice Tray	4.3	Rap
+33	Drake	God's Plan	8.1	Rap
+32 	Lil Baby	Freestyle	9.1	Rap
+31	Trulla Eddie	No Worries	3.4	Unknown
+30	Eminem	Offended	4.1	Rap
+29	Str8 On Ha	Dee Mula	4	Rap
+28	Drake	God's Plan	4.6	Rap
+27	Chief Keef	Glory Bridge	4.3	Rap
+26	Alkaline	Wait Yuh Turn	3.1	Dancehall
+25	Migos	Notice Me	4.1	Rap
+24	Aidonia	Breeze	5.1	Dancehall
+23	Ding Dong	Gas	4.6	Dancehall
+22	Cal Scruby	Rain	3.1	Rap
+21	G Herbo	This N That	3.5	RnB
+20	Ding Dong	Shampoo	5.1	Dancehall
+19	Maleek Berry	Let Me Know	3.8	RnB
+18	Quality Control	Ice Tray	6.1	Rap
+17	Alkaline	Suave	4.3	Dancehall
+16	A$AP Mob	Frat Rules	4.1	Rap
+15	Vybz Kartel	Fever	4.9	Dancehall
+14	William Onyeabor	Fantastic Man	3.1	Unknown
+13	Migos	Stir Fry	4	Rap
+12	Bruno Mars 	24K Magic	3.5	Pop
+11	Quality Control	Ice Tray	3.2	Rap
+10	Dyleet	Ding Dong Ravers	4.1	Dancehall
+09	Ed Sheeran	Perfect	4.9	Pop
+08	Eminem	Walk on Water	4.5	Pop
+07	Ding Dong	Flairy	8.1	Dancehall
+06	Kendrick Lamar	DNA	2.1	Rap
+05	Radiohead	Paranoid Android	4	Rock
+04	Ski Mask	Catch Me Outside	2.1	Rap
+03	Aidonia	Banga	7.1	Dancehall
+02	N3RD	Lemon	3.1	Pop
+01	Key Glock	Racks Today	3.7	Rap

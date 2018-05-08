@@ -19,11 +19,10 @@ using namespace std;
 
 int main() {
     cout << "WELCOME TO YOUR MUSIC PLAYER\n" << endl;
-    string nameofPlaylist, nameofUser;
-    int max;
+    string nameofUser="", nameofPlaylist="";
     User::userName(nameofUser);
+    int max;
     int selection;
-
     do {
         cout << "*********MENU*********\n";
         cout << "1. Load & name playlist\n";
@@ -31,7 +30,7 @@ int main() {
         cout << "3. Update user information\n";
         cout << "4. Add Song to playlist\n";
         cout << "5. Quit\n";
-        cout << "Make a menu selection 1-5: ";
+        cout << "Pick a menu selection 1-5: " << endl;
         cin >> selection;
         cout << endl;
     
@@ -49,8 +48,8 @@ int main() {
                 break;
                 
             case 3:
+                cout << "Update User Information" << endl;
                 User::userName(nameofUser);
-                break;
             
             case 4:
                 max = Find_Max_Likes();
@@ -59,7 +58,7 @@ int main() {
                 break;
 
             case 5:
-                cout << "Have a Good Day!";
+                cout << "Good Bye :(.. See You Soon!" << endl;
                 break;
                 
             default:
@@ -69,31 +68,33 @@ int main() {
     }
     while (selection != 5);
     
-    return 0;    
+    return 0;
+        
 }
+
 int Find_Max_Likes(){
-
-    //GETLINE IN WHOLE THING INTO A VECTOR 
+    
+    //GETLINE IN WHOLE THING INTO A VECTOR
     //AND USE SIZE OF VECTOR AS MAX_LIKES
-
+    
     ifstream myfile; string line;
     int count=0;
     myfile.open("playlist.txt");
     
-   if(!myfile.is_open()){
-       cout << "Couldn't open playlist.txt" <<endl;
-   }
+    if(!myfile.is_open()){
+        cout << "Couldn't open playlist.txt" <<endl;
+    }
     /*Looping until end of file:
-       uses getline to move line by line
-       meanwhile we are counting each line to get max likes
-       Assumtption: max likes == total # of songs in playlist 
-    */
+        uses getline to move line by line
+        meanwhile we are counting each line to get max likes
+        Assumtption: max likes == total # of songs in playlist
+     */
     while(!myfile.eof()){
         getline(myfile,line);
-       if(line!=""){
+        if(line!=""){
             count++;
-       }
-       line="";
+        }
+        line="";
     }
     myfile.close();
     return count;

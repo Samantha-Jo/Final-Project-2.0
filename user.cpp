@@ -16,8 +16,10 @@ using namespace std;
 
 string User::userName(string nameofUser) {
     cout << "Username: ";
-    cin >> nameofUser;
+    cin.get();
+    getline(cin, nameofUser);
     cout << endl;
+    
     return nameofUser;
 }
 
