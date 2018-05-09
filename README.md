@@ -1,7 +1,4 @@
-# Final-Project-2.0
-
-CS2-Final-Project: Sounds
-Presenting Sounds: A new way to enjoy the music you love.
+# Presenting Sounds: A new way to enjoy the music you love.
 
 The overall time complexity of the program is O(MNlogN) 
 	where N is the total number of songs in the playlist 
@@ -63,17 +60,17 @@ Everything else takes O(1) time, which has no bearing on the final logorithmic r
     -Figured out the time complexity for the entire program.
     -Ensures all classes work together with the main.cpp so that program requirements are achieved.
     
-SIDENOTE: 
+TRY IT: 
 
-Files:
-main.cpp
-user.h
-user.cpp
-playlist.h
-playlist.cpp
-song.h
-song.cpp
-sort.h
+Files: 
+main.cpp, 
+user.h, 
+user.cpp, 
+playlist.h, 
+playlist.cpp, 
+song.h, 
+song.cpp, 
+sort.h, 
 sort.cpp
 
 Compile: $ g++ main.cpp user.cpp playlist.cpp song.cpp sort.cpp -o sounds.exe
