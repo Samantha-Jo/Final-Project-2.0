@@ -9,35 +9,36 @@ The overall time complexity of the program is O(MNlogN)
 
 This applies for whatever combinations of the four menu options the user chooses since the time taken for option (2) grows the fastest as the input grows.  Let's take them one at a time.
 
-1. Load & name playlist
+1. Load & name playlist: 
 	O(N) time
-2. Play playlist
+2. Play playlist: 
 	O(NlogN)
-3. Update user information
+3. Update user information: 
 	O(1) time
-4. Add Song to playlist
+4. Add Song to playlist: 
 	O(1) time
-5. Quit
+5. Quit: 
 	O(1) time
 
-Loading playlist looks once at each of N songs, so it takes O(N) time.
-The `Play playlist` option sorts, then plays the playlist.
+`Load playlist` looks once at each of N songs, so it takes O(N) time.  
+The `Play playlist` option sorts, then plays the playlist.  
 
-Sorting playlist: O(NlogN)
-	we used introsort, which involves recursively halving the list
-	in the end the list ends up being halved approximately logN times,
-	the list is operated on after each halving, which takes O(N) time
+Sorting playlist: O(NlogN)  
+	We used introsort, which involves recursively halving the list.  
+	In the end the list ends up being halved approximately logN times.
+	The list is operated on after each halving, which takes O(N) time, 
 	so the final sort runtime is O(NlogN)
 
-Total for `Play playlist` option: O(2N + NlogN)
-	which reduces to O(NlogN)
+The total for the `Play playlist` option is O(2N + NlogN), 
+	which reduces to O(NlogN).
 
-Everything else takes O(1) time, which has no bearing on the final logorithmic runtime once the higher order functions are factored in.
-    constructors: O(1) time
-    mutators: O(1) time
-    accessors: O(1) time
-    Playlist::AddNewSong(): O(1) time
-    User::userName(): O(1) time
+Everything else takes O(1) time, which has no bearing on the final logorithmic runtime once the higher order functions are factored in.  
+
+    constructors: O(1) time  
+    mutators: O(1) time  
+    accessors: O(1) time  
+    Playlist::AddNewSong(): O(1) time  
+    User::userName(): O(1) time  
     
 -->Contributions:
 
