@@ -55,11 +55,11 @@ Everything else takes O(1) time, which has no bearing on the final logorithmic r
 3. Peace Aku:
 
     -Song.cpp
-    -Figured out the time complexity for the entire program.
+    -Created the user.cpp
 
 4. Azeezah Muhammad:
 
-    -Created the user.cpp
+    -Figured out the time complexity for the entire program.
     -Ensures all classes work together with the main.cpp so that program requirements are achieved.
     
 SIDENOTE: 
